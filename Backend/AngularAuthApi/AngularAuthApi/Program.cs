@@ -1,44 +1,52 @@
 using AngularAuthApi.Context;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    Args = args,
+    WebRootPath = "wwwroot" // Ensure static files are correctly served
+});
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<AppDbContext>(option =>
+builder.Services.AddDbContext<AppDbContext>(options =>
 {
-option.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnStr"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnStr"));
 });
 
-//still not done by doing this , we have only configured this yet we have registered it inside the pipeline,
-//Always remember we have to put our corspipeline or middleware above Authentication and authorization
+// CORS configuration
 builder.Services.AddCors(options =>
 {
-  options.AddPolicy("MyPolicy", builder =>
-  {
-    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-  });
+    options.AddPolicy("MyPolicy", policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
 });
 
-
 var app = builder.Build();
-app.UseStaticFiles();
 
-// Configure the HTTP request pipeline.
+// Middleware pipeline configuration
+app.UseStaticFiles();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-
+// Set up HTTPS redirection
 app.UseHttpsRedirection();
+
+// CORS, Authentication, and Authorization
 app.UseCors("MyPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Map controllers
 app.MapControllers();
 
+// Explicitly bind to port 8080 (matching Dockerfile)
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Urls.Add($"http://+:{port}");
+
+// Run the application
 app.Run();
