@@ -7,7 +7,7 @@ COPY ["AngularAuthApi/AngularAuthApi.csproj", "AngularAuthApi/"]
 RUN dotnet restore "AngularAuthApi/AngularAuthApi.csproj"
 
 # Copy the rest of the source code
-COPY . . 
+COPY . .
 WORKDIR "/src/AngularAuthApi"
 
 # Build the application
@@ -17,12 +17,18 @@ RUN dotnet build "AngularAuthApi.csproj" -c Release -o /app/build
 FROM build AS publish
 RUN dotnet publish "AngularAuthApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
-# Final stage/image
+# Final runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 RUN mkdir -p /app/wwwroot
 COPY --from=publish /app/publish .
+
+# Set environment variables
 ENV ASPNETCORE_URLS=http://+:8080
 ENV ASPNETCORE_ENVIRONMENT=Production
+
+# Expose the required port
 EXPOSE 8080
+
+# Start the application
 ENTRYPOINT ["dotnet", "AngularAuthApi.dll"]
