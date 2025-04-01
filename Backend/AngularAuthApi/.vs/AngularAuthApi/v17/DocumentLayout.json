@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\controllers\\aichatcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\controllers\\aichatcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\models\\analysisresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\models\\analysisresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\models\\symptomrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\models\\symptomrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\models\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\models\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\models\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\models\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\migrations\\20250318122706_doctors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\migrations\\20250318122706_doctors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|c:\\users\\user\\health\\health\\backend\\angularauthapi\\angularauthapi\\migrations\\20250326111926_appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B27F6BBD-5C00-424C-8848-ECB0051E1EF4}|AngularAuthApi\\AngularAuthApi.csproj|solutionrelative:angularauthapi\\migrations\\20250326111926_appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DoctorDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\DoctorDto.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Models\\DoctorDto.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\DoctorDto.cs",
+              "RelativeToolTip": "AngularAuthApi\\Models\\DoctorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T10:55:40.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\Appointment.cs",
+              "RelativeToolTip": "AngularAuthApi\\Models\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T10:54:47.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AiChatController .cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Controllers\\AiChatController .cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Controllers\\AiChatController .cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Controllers\\AiChatController .cs",
+              "RelativeToolTip": "AngularAuthApi\\Controllers\\AiChatController .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T15:12:01.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Program.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Program.cs",
+              "RelativeToolTip": "AngularAuthApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T10:22:51.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Services\\NotificationService.cs",
+              "RelativeToolTip": "AngularAuthApi\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T10:59:52.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AnalysisResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\AnalysisResponse.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Models\\AnalysisResponse.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\AnalysisResponse.cs",
+              "RelativeToolTip": "AngularAuthApi\\Models\\AnalysisResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T10:53:53.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SymptomRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\SymptomRequest.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Models\\SymptomRequest.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\SymptomRequest.cs",
+              "RelativeToolTip": "AngularAuthApi\\Models\\SymptomRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T10:50:09.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "AngularAuthApi\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T15:39:59.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20250326111926_appointment.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Migrations\\20250326111926_appointment.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Migrations\\20250326111926_appointment.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Migrations\\20250326111926_appointment.cs",
+              "RelativeToolTip": "AngularAuthApi\\Migrations\\20250326111926_appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:19:27.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\appsettings.json",
+              "RelativeDocumentMoniker": "AngularAuthApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\appsettings.json",
+              "RelativeToolTip": "AngularAuthApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-25T13:31:18.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20250318122706_Doctors.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Migrations\\20250318122706_Doctors.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Migrations\\20250318122706_Doctors.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Migrations\\20250318122706_Doctors.cs",
+              "RelativeToolTip": "AngularAuthApi\\Migrations\\20250318122706_Doctors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T12:27:06.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DoctorsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Controllers\\DoctorsController.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Controllers\\DoctorsController.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Controllers\\DoctorsController.cs",
+              "RelativeToolTip": "AngularAuthApi\\Controllers\\DoctorsController.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAADwv8kAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T09:19:48.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppointmentModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\AppointmentModel.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Models\\AppointmentModel.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Models\\AppointmentModel.cs",
+              "RelativeToolTip": "AngularAuthApi\\Models\\AppointmentModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T11:31:57.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "AngularAuthApi\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "AngularAuthApi\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowBAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T11:23:06.058Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "mW27VHkbXbR9WO9mKGSIz0GhHocJAd+P14xXFa2vQzU=",
+  "Source": "AngularAuthApi",
+  "BasePath": "_content/AngularAuthApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AngularAuthApi\\wwwroot",
+      "Source": "AngularAuthApi",
+      "ContentRoot": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\",
+      "BasePath": "_content/AngularAuthApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
+      "SourceId": "AngularAuthApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\",
+      "BasePath": "_content/AngularAuthApi",
+      "RelativePath": "temp/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pywh1cqmm6",
+      "Integrity": "380aIYAzXEuOLHLhfl/GunB51YIvBNMVH8PsWugIY9E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\temp\\logo.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "temp/logo.png",
+      "AssetFile": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"380aIYAzXEuOLHLhfl/GunB51YIvBNMVH8PsWugIY9E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 12:59:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-380aIYAzXEuOLHLhfl/GunB51YIvBNMVH8PsWugIY9E="
+        }
+      ]
+    },
+    {
+      "Route": "temp/logo.pywh1cqmm6.png",
+      "AssetFile": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"380aIYAzXEuOLHLhfl/GunB51YIvBNMVH8PsWugIY9E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 12:59:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pywh1cqmm6"
+        },
+        {
+          "Name": "label",
+          "Value": "temp/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-380aIYAzXEuOLHLhfl/GunB51YIvBNMVH8PsWugIY9E="
+        }
+      ]
+    }
+  ]
+}

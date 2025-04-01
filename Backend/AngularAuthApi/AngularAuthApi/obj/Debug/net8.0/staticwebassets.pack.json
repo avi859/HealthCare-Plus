@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\health\\Health\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
+      "PackagePath": "staticwebassets\\temp\\logo.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AngularAuthApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AngularAuthApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AngularAuthApi.props",
+      "PackagePath": "build\\AngularAuthApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AngularAuthApi.props",
+      "PackagePath": "buildMultiTargeting\\AngularAuthApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AngularAuthApi.props",
+      "PackagePath": "buildTransitive\\AngularAuthApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
