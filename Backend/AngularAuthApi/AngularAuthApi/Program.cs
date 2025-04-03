@@ -10,10 +10,15 @@ var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddHttpClient();
-builder.Services.AddScoped<NewsService>();
+
+// Register HttpClient for NewsService
+builder.Services.AddHttpClient<NewsService>();  // Fix here
+
+builder.Services.AddScoped<NewsService>();  // No change here, correctly scoped
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnStr"));
