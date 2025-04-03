@@ -1,4 +1,5 @@
 using AngularAuthApi.Context;
+using AngularAuthApi.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
@@ -10,6 +11,7 @@ var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
+builder.Services.AddScoped<NewsService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
