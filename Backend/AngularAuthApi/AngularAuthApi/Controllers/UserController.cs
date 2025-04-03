@@ -21,19 +21,32 @@ namespace AngularAuthApi.Controllers
     }
 
     [HttpPost("authenticate")]
-    public async Task<IActionResult> Authenticate([FromBody] User userObj)
-    {
-      if (userObj == null)
-        return BadRequest();
+        public async Task<IActionResult> Authenticate([FromBody] User userObj)
+        {
+            if (userObj == null)
+            {
+                Console.WriteLine("Received null userObj");
+                return BadRequest(new { Message = "Invalid request" });
+            }
 
-      //if user is already +nt in the database for that we need to check
-      var user = await _authContext.Users.FirstOrDefaultAsync
-        (x => x.Username == userObj.Username && x.Password == userObj.Password);
+            Console.WriteLine($"Received Username: {userObj.Username}");
 
-      if (user == null) return NotFound(new { Message = "Username not found!" });
+            var user = await _authContext.Users.FirstOrDefaultAsync(x => x.Username == userObj.Username);
 
-      return Ok(new { Message = "Login Success!" });
-    }
+            if (user == null)
+            {
+                Console.WriteLine($"User with username '{userObj.Username}' not found in database.");
+                return NotFound(new { Message = "Username not found!" });
+            }
+
+            if (!PasswordHasher.VerifyPassword(userObj.Password, user.Password))
+            {
+                Console.WriteLine("Password does not match");
+                return BadRequest(new { Message = "Invalid password!" });
+            }
+
+            return Ok(new { Message = "Login Success!" });
+        }
 
     [HttpPost("register")]
     public async Task<IActionResult> RegisterUser([FromBody] User userObj)
