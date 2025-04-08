@@ -162,6 +162,18 @@
         }
       }
     },
+    "/api/news/health": {
+      "get": {
+        "tags": [
+          "News"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/User/authenticate": {
       "post": {
         "tags": [

@@ -90,6 +90,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AngularAuthApi.Controllers.NewsController",
+    "Method": "GetHealthNews",
+    "RelativePath": "api/news/health",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AngularAuthApi.Controllers.UserController",
     "Method": "Authenticate",
     "RelativePath": "api/User/authenticate",

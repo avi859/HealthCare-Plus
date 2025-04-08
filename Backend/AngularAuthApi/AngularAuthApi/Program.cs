@@ -1,5 +1,6 @@
 using AngularAuthApi.Context;
 using AngularAuthApi.Services;
+using AngularAuthApi.utilityService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
@@ -15,6 +16,8 @@ builder.Services.AddControllers();
 builder.Services.AddHttpClient<NewsService>();  // Fix here
 
 builder.Services.AddScoped<NewsService>();  // No change here, correctly scoped
+
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
