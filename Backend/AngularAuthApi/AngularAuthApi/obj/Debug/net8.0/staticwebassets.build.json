@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XcGSQeFXpWVtNPjpFSxDXez2O15dvu7D9CBlsrruV/A=",
+  "Hash": "dM2u4c7dk4/hoRGUUJ5OfuYlmfGWbiuvXVRuFLdegmk=",
   "Source": "AngularAuthApi",
   "BasePath": "_content/AngularAuthApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "AngularAuthApi\\wwwroot",
       "Source": "AngularAuthApi",
-      "ContentRoot": "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\",
       "BasePath": "_content/AngularAuthApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
+      "Identity": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
       "SourceId": "AngularAuthApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\",
       "BasePath": "_content/AngularAuthApi",
       "RelativePath": "temp/logo#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -41,7 +41,7 @@
   "Endpoints": [
     {
       "Route": "temp/logo.png",
-      "AssetFile": "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
+      "AssetFile": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -78,7 +78,7 @@
     },
     {
       "Route": "temp/logo.pywh1cqmm6.png",
-      "AssetFile": "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
+      "AssetFile": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\wwwroot\\temp\\logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {

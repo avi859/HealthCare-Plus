@@ -132,6 +132,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AngularAuthApi.Controllers.UserController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/User/reset -Password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordDto",
+        "Type": "AngularAuthApi.Models.ResetPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AngularAuthApi.Controllers.UserController",
+    "Method": "SendEmail",
+    "RelativePath": "api/User/send-reset-email/{email}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AngularAuthApi.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

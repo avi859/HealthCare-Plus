@@ -89,7 +89,8 @@ namespace AngularAuthApi.Controllers
         [HttpPost("reset -Password")]
         public async Task<IActionResult> ResetPassword(ResetPasswordDto resetPasswordDto)
         {
-            var newToken = resetPasswordDto.EmailToken!.Replace(" ", "+");
+            //var newToken = resetPasswordDto.EmailToken!.Replace(" ", "+");
+            var newToken = Uri.UnescapeDataString(resetPasswordDto.EmailToken!);
             var user = await _authContext.Users.FirstOrDefaultAsync(a => a.Email == resetPasswordDto.Email);
             if (user == null)
             {

@@ -1,4 +1,4 @@
-using AngularAuthApi.Context;
+﻿using AngularAuthApi.Context;
 using AngularAuthApi.Services;
 using AngularAuthApi.utilityService;
 using Microsoft.EntityFrameworkCore;
@@ -55,8 +55,16 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Explicitly bind to port 8080 (matching Dockerfile)
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-app.Urls.Add($"http://+:{port}");
+//var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+//app.Urls.Add($"http://+:{port}");
+
+
+if (!app.Environment.IsDevelopment())
+{
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+    app.Urls.Add($"http://+:{port}");
+}
+
 
 // Run the application
 app.Run();

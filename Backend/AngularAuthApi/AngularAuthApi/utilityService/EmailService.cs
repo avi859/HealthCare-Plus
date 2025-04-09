@@ -1,6 +1,7 @@
 ﻿using MimeKit;
 using MailKit.Net.Smtp;
 using AngularAuthApi.Models;
+using MailKit.Security;
 
 namespace AngularAuthApi.utilityService
 {
@@ -17,26 +18,26 @@ namespace AngularAuthApi.utilityService
         {
             var emailMessage = new MimeMessage();
             var from = _config["EmailSettings:From"];
-            emailMessage.From.Add(new MailboxAddress("lets program", from));
+            emailMessage.From.Add(new MailboxAddress("HealthcarePlus", from));
             emailMessage.To.Add(new MailboxAddress(emailModel.To, emailModel.To));
             emailMessage.Subject = emailModel.Subject;
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
             {
-                Text = string.Format(emailModel.Content)
+                //Text = string.Format(emailModel.Content)
+                Text = emailModel.Content
+
             };
 
             using (var client = new SmtpClient())
             {
                 try
                 {
-                    // Connect to the SMTP server using MailKit's SmtpClient
-                    client.Connect(_config["EmailSettings:SmtpServer"], 587, true);  // Assuming you are using TLS
+                    client.Connect(_config["EmailSettings:SmtpServer"], 587, SecureSocketOptions.StartTls);
                     client.Authenticate(_config["EmailSettings:From"], _config["EmailSettings:Password"]);
                     client.Send(emailMessage);
                 }
                 catch (Exception ex)
                 {
-                    // Handle the exception (log it, rethrow it, etc.)
                     Console.WriteLine($"Error sending email: {ex.Message}");
                 }
                 finally
@@ -45,6 +46,7 @@ namespace AngularAuthApi.utilityService
                     client.Dispose();
                 }
             }
+
         }
     }
 }
