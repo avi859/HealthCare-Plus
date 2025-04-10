@@ -87,7 +87,7 @@ namespace AngularAuthApi.Controllers
             });
         }
 
-        [HttpPost("reset -Password")]
+        [HttpPost("reset-Password")]
         public async Task<IActionResult> ResetPassword(ResetPasswordDto resetPasswordDto)
         {
             //var newToken = resetPasswordDto.EmailToken!.Replace(" ", "+");
