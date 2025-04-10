@@ -72,6 +72,7 @@ namespace AngularAuthApi.Controllers
             // Generate a secure token (you might want to store it in the DB or a cache with an expiration)
             var tokenBytes = RandomNumberGenerator.GetBytes(64);
             var emailToken = Convert.ToBase64String(tokenBytes);
+
             user.ResetPasswordToken = emailToken;
             user.ResetPasswordExpiry = DateTime.Now.AddMinutes(15).ToString("yyyy-MM-dd HH:mm:ss");
             string from = _configuration["EmailSettings:From"];

@@ -103,7 +103,7 @@
         <hr>
         <p>You're receiving this email because you requested a password reset for your Healthcare Plus account.</p>
         <p>Please click the button below to choose a new password.</p>
-        <a href=""http://localhost:4200/reset?email={{{{email}}}}&code={{{{emailToken}}}}"" 
+        <a href=""http://localhost:4200/reset?email={email}&code={emailToken}"" 
            target=""_blank"" 
            class=""reset-button"">
             Reset Password
