@@ -1,7 +1,10 @@
-﻿using AngularAuthApi.Context;
+﻿using System.Text;
+using AngularAuthApi.Context;
 using AngularAuthApi.Services;
 using AngularAuthApi.utilityService;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
@@ -36,6 +39,24 @@ builder.Services.AddCors(options =>
     });
 });
 
+// ✅ Add Authentication (MUST be before builder.Build())
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])
+            )
+        };
+    });
+
 var app = builder.Build();
 
 // Middleware pipeline configuration
@@ -54,17 +75,11 @@ app.UseAuthorization();
 // Map controllers
 app.MapControllers();
 
-// Explicitly bind to port 8080 (matching Dockerfile)
-//var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-//app.Urls.Add($"http://+:{port}");
-
-
 if (!app.Environment.IsDevelopment())
 {
     var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
     app.Urls.Add($"http://+:{port}");
 }
-
 
 // Run the application
 app.Run();

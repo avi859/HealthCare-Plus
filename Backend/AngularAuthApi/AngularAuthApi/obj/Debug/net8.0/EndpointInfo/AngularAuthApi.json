@@ -227,7 +227,7 @@
         }
       }
     },
-    "/api/User/reset -Password": {
+    "/api/User/reset-Password": {
       "post": {
         "tags": [
           "User"
@@ -278,6 +278,37 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/google-login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleLoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleLoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleLoginDto"
               }
             }
           }
@@ -411,6 +442,16 @@
             "nullable": true
           },
           "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GoogleLoginDto": {
+        "type": "object",
+        "properties": {
+          "idToken": {
             "type": "string",
             "nullable": true
           }

@@ -4,6 +4,7 @@ using AngularAuthApi.Context;
 using AngularAuthApi.Helpers;
 using AngularAuthApi.Models;
 using AngularAuthApi.utilityService;
+using Google.Apis.Auth;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -50,8 +51,9 @@ namespace AngularAuthApi.Controllers
                 Console.WriteLine("Password does not match");
                 return BadRequest(new { Message = "Invalid password!" });
             }
+            var token = JwtHelper.GenerateJwtToken(user, _configuration);
 
-            return Ok(new { Message = "Login Success!" });
+            return Ok(new { Token = token, Message = "Login Success!" });
         }
 
         [HttpPost("send-reset-email/{email}")]
@@ -161,6 +163,49 @@ namespace AngularAuthApi.Controllers
             await _authContext.SaveChangesAsync();
             return Ok(new { Message = "User Registered!" });
         }
+
+        [HttpPost("google-login")]
+        public async Task<IActionResult> GoogleLogin([FromBody] GoogleLoginDto loginDto)
+        {
+            try
+            {
+                //? this is official method of google in their .net SDK to verify whether token is valid or not and it's
+                //? comes from this library-> Install-Package Google.Apis.Auth
+                var payload = await GoogleJsonWebSignature.ValidateAsync(loginDto.IdToken);
+
+                var user = await _authContext.Users.FirstOrDefaultAsync(u => u.Email == payload.Email);
+
+                if (user == null)
+                {
+                    // New user - create in DB
+                    user = new User
+                    {
+                        Email = payload.Email,
+                        Username = payload.GivenName,
+                        Role = "User",
+                        Password = "",  // Since no password is required
+                    };
+                    await _authContext.Users.AddAsync(user);
+                    await _authContext.SaveChangesAsync();
+                }
+
+                // Generate JWT
+                var token = JwtHelper.GenerateJwtToken(user, _configuration);  // You'll implement this
+                return Ok(new { token });
+            }
+            catch (InvalidJwtException ex)
+            {
+                return BadRequest(new { message = $"Invalid Google ID token: {ex.Message}" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Google Login Error: {ex}");
+                return StatusCode(500, new { message = $"Google login failed: {ex.Message}" });
+            }
+        }
+
+
+
         //need to check is username is unique or not
         private async Task<bool> CheckUserNameExistAsync(string username)
         {

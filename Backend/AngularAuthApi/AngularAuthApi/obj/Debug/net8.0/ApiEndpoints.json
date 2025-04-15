@@ -117,6 +117,22 @@
   },
   {
     "ContainingType": "AngularAuthApi.Controllers.UserController",
+    "Method": "GoogleLogin",
+    "RelativePath": "api/User/google-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "AngularAuthApi.Models.GoogleLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AngularAuthApi.Controllers.UserController",
     "Method": "RegisterUser",
     "RelativePath": "api/User/register",
     "HttpMethod": "POST",
@@ -134,7 +150,7 @@
   {
     "ContainingType": "AngularAuthApi.Controllers.UserController",
     "Method": "ResetPassword",
-    "RelativePath": "api/User/reset -Password",
+    "RelativePath": "api/User/reset-Password",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
