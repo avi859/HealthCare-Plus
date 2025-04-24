@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj": {}
+    "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj": {
+    "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj",
         "projectName": "AngularAuthApi",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj",
+        "projectPath": "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\obj\\",
         "projectStyle": "PackageReference",
@@ -79,6 +79,10 @@
             "NETCore.MailKit": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

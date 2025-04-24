@@ -7270,6 +7270,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.2",
       "Microsoft.Extensions.Http >= 9.0.3",
       "NETCore.MailKit >= 2.1.0",
+      "Newtonsoft.Json >= 13.0.3",
       "Swashbuckle.AspNetCore >= 7.2.0",
       "Twilio >= 7.8.5",
       "iTextSharp.LGPLv2.Core >= 3.7.1"
@@ -7282,9 +7283,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj",
       "projectName": "AngularAuthApi",
-      "projectPath": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj",
+      "projectPath": "C:\\Users\\User\\source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\AngularAuthApi.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\Source\\Repos\\HealthCare-Plus\\Backend\\AngularAuthApi\\AngularAuthApi\\obj\\",
       "projectStyle": "PackageReference",
@@ -7354,6 +7355,10 @@
           "NETCore.MailKit": {
             "target": "Package",
             "version": "[2.1.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
