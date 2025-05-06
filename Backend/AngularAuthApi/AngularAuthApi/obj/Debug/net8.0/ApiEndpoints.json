@@ -17,22 +17,6 @@
   },
   {
     "ContainingType": "AngularAuthApi.Controllers.BookingController",
-    "Method": "GetBookingsByUsername",
-    "RelativePath": "api/Booking/{username}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "username",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AngularAuthApi.Controllers.BookingController",
     "Method": "CreateBooking",
     "RelativePath": "api/Booking/create",
     "HttpMethod": "POST",

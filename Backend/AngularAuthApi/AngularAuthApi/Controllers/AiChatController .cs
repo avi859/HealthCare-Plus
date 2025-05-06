@@ -8,41 +8,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Org.BouncyCastle.Asn1.Crmf;
 
-//[ApiController]
-//[Route("api/chat")]
-//public class AiChatController : ControllerBase
-//{
-//    private readonly HttpClient _httpClient;
-//    private readonly string _groqApiKey = "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"; // 🔒 Keep this secret
-
-//    public AiChatController()
-//    {
-//        _httpClient = new HttpClient();
-//    }
-
-//[HttpPost("ask")]
-//public async Task<IActionResult> AskGroq([FromBody] ChatRequest request)
-//{
-//    if (string.IsNullOrWhiteSpace(request.Message))
-//        return BadRequest("Message cannot be empty");
-
-//    var groqRequest = new
-//    {
-//        model = "llama-3.3-70b-versatile",
-//        messages = new[] { new { role = "user", content = request.Message } }
-//    };
-
-//    var requestContent = new StringContent(JsonSerializer.Serialize(groqRequest), Encoding.UTF8, "application/json");
-//    _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _groqApiKey);
-
-//    var response = await _httpClient.PostAsync("https://api.groq.com/openai/v1/chat/completions", requestContent);
-
-//    if (!response.IsSuccessStatusCode)
-//        return StatusCode((int)response.StatusCode, "Error connecting to AI");
-
-//    var responseContent = await response.Content.ReadAsStringAsync();
-//    return Ok(responseContent);
-//}
 
 [Route("api/chat")]
 [ApiController]

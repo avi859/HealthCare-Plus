@@ -55,10 +55,6 @@ namespace AngularAuthApi.Controllers
       return Ok(new { Message = "Doctor added successfully!", Doctor = doctor });
     }
 
-
-
-
-
     private void SeedDummyData()
     {
       var dummyDoctors = new List<Doctor>
