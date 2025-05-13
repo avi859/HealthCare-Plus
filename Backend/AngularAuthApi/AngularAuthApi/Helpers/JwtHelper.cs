@@ -8,15 +8,15 @@ namespace AngularAuthApi.Helpers
 {
     public static class JwtHelper
     {
-        public static string GenerateJwtToken(User user, IConfiguration config)
+        public static string GenerateJwtToken(IAccount account, IConfiguration config)
         {
             var claims = new[]
             {
-            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new Claim(ClaimTypes.Name, user.Username),
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Role, user.Role)
-        };
+                new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
+                new Claim(ClaimTypes.Name, account.Username),
+                new Claim(ClaimTypes.Email, account.Email),
+                new Claim(ClaimTypes.Role, account.Role)
+            };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -32,5 +32,4 @@ namespace AngularAuthApi.Helpers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
-
 }

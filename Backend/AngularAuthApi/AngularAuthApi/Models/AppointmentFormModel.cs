@@ -1,7 +1,7 @@
 namespace AngularAuthApi.Models
 {
-  public class AppointmentModel
-  {
+  public class AppointmentFormModel
+    {
     public string? FullName { get; set; }
     public string? Email { get; set; }
     public string? Phone { get; set; }
@@ -14,3 +14,4 @@ namespace AngularAuthApi.Models
   }
 
 }
+   

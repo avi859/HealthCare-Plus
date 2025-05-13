@@ -4,6 +4,7 @@ using AngularAuthApi.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AngularAuthApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250506164339_Added Doctor Fields")]
+    partial class AddedDoctorFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,16 +33,13 @@ namespace AngularAuthApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("AppointmentTime")
+                    b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DoctorPhone")
+                    b.Property<string>("Doctor")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PatientName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -47,7 +47,7 @@ namespace AngularAuthApi.Migrations
                     b.ToTable("Appointments");
                 });
 
-            modelBuilder.Entity("AngularAuthApi.Models.AppointmentBooking", b =>
+            modelBuilder.Entity("AngularAuthApi.Models.Booking", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -74,10 +74,6 @@ namespace AngularAuthApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PreviousHistory")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Symptoms")
@@ -125,52 +121,6 @@ namespace AngularAuthApi.Migrations
                     b.ToTable("Doctors");
                 });
 
-            modelBuilder.Entity("AngularAuthApi.Models.DoctorAccount", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ResetPasswordExpiry")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ResetPasswordToken")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Role")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Token")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("DoctorAccounts");
-                });
-
             modelBuilder.Entity("AngularAuthApi.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -180,7 +130,6 @@ namespace AngularAuthApi.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
@@ -190,7 +139,6 @@ namespace AngularAuthApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ResetPasswordExpiry")
@@ -206,7 +154,6 @@ namespace AngularAuthApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

@@ -202,7 +202,7 @@ namespace AngularAuthApi.Controllers
                     Experience = 6,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Ethan+Moore",
                     PhoneNumber = "+15005550006"
-                }
+                },
             };
 
       // Check if there are any doctors in the database

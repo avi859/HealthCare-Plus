@@ -1,4 +1,5 @@
 using AngularAuthApi.Models;
+using AngularAuthApi.Services;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Microsoft.AspNetCore.Hosting;
@@ -11,14 +12,16 @@ using System.Threading.Tasks;
 public class AppointmentController : ControllerBase
 {
   private readonly IWebHostEnvironment _webHostEnvironment;
+  private readonly AppointmentService _appointmentService;
 
-  public AppointmentController(IWebHostEnvironment webHostEnvironment)
-  {
-    _webHostEnvironment = webHostEnvironment;
-  }
+    public AppointmentController(IWebHostEnvironment webHostEnvironment , AppointmentService appointmentService)
+    {
+     _webHostEnvironment = webHostEnvironment;
+     _appointmentService = appointmentService;
+    }
 
   [HttpPost("generate-pdf")]
-  public IActionResult GeneratePDF([FromBody] AppointmentModel appointment)
+  public IActionResult GeneratePDF([FromBody] AppointmentFormModel appointment)
   {
     if (appointment == null)
     {
@@ -112,4 +115,49 @@ public class AppointmentController : ControllerBase
       return File(pdfBytes, "application/pdf", "AppointmentConfirmation.pdf");
     }
   }
+
+    // GET: api/appointment/get-appointments?doctorPhone=1234567890
+    [HttpGet("get-appointments")]
+    public async Task<ActionResult<List<Appointment>>> GetAppointments([FromQuery] string doctorPhone)
+    {
+        if (string.IsNullOrEmpty(doctorPhone))
+        {
+            return BadRequest("Doctor phone number is required.");
+        }
+
+        var appointments = await _appointmentService.GetAppointmentsByDoctorAsync(doctorPhone);
+
+        if (appointments == null || appointments.Count == 0)
+        {
+            return NotFound("No appointments found.");
+        }
+
+        return Ok(appointments);
+    }
+
+    // POST: api/appointment/add-appointment
+    [HttpPost("add-appointment")]
+    public async Task<ActionResult> AddAppointment([FromBody] Appointment appointment)
+    {
+        if (appointment == null)
+        {
+            return BadRequest("Invalid appointment data.");
+        }
+
+        await _appointmentService.AddAppointmentAsync(appointment);
+        return CreatedAtAction(nameof(GetAppointments), new { doctorPhone = appointment.DoctorPhone }, appointment);
+    }
+
+    // PUT: api/appointment/update-status
+    [HttpPut("update-status")]
+    public async Task<ActionResult> UpdateAppointmentStatus([FromQuery] int appointmentId, [FromQuery] string status)
+    {
+        if (appointmentId <= 0 || string.IsNullOrEmpty(status))
+        {
+            return BadRequest("Invalid appointment ID or status.");
+        }
+
+        await _appointmentService.UpdateAppointmentStatusAsync(appointmentId, status);
+        return Ok("Appointment status updated successfully.");
+    }
 }

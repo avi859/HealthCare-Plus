@@ -5,7 +5,6 @@ using AngularAuthApi.utilityService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
     Args = args,
@@ -21,6 +20,9 @@ builder.Services.AddHttpClient<NewsService>();  // Fix here
 builder.Services.AddScoped<NewsService>();  // No change here, correctly scoped
 
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<AppointmentService>();
+builder.Services.AddSignalR();
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

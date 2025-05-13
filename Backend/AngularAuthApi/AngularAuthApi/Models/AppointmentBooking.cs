@@ -1,7 +1,7 @@
 ﻿namespace AngularAuthApi.Models
 {
-    public class Booking
-{
+    public class AppointmentBooking
+    {
     public int Id { get; set; }
     public string? Username { get; set; }
     public string? FullName { get; set; }
@@ -13,7 +13,8 @@
     public string? Time { get; set; }
     public string? Symptoms { get; set; }
     public string? PreviousHistory { get; set; }
-}
+    public string Status { get; set; } = "Scheduled"; // Default status
+    }
 
 
 }

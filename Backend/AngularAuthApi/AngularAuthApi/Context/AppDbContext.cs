@@ -14,8 +14,8 @@ namespace AngularAuthApi.Context
     public DbSet<Doctor> Doctors { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
 
-    public DbSet<Booking> Bookings { get; set; }
-
+    public DbSet<AppointmentBooking> Bookings { get; set; }
+    public DbSet<DoctorAccount> DoctorAccounts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
