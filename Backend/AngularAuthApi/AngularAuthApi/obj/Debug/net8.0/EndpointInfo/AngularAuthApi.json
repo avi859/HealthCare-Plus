@@ -857,6 +857,17 @@
           "phoneNumber": {
             "type": "string",
             "nullable": true
+          },
+          "consultationFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "registeredAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false

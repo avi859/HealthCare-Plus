@@ -41,19 +41,21 @@ namespace AngularAuthApi.Controllers
       return Ok(doctor);
     }
 
-    [HttpPost]
-    public async Task<IActionResult> CreateDoctor([FromBody] Doctor doctor)
-    {
-      if (doctor == null)
-      {
+   [HttpPost]
+public async Task<IActionResult> CreateDoctor([FromBody] Doctor doctor)
+{
+    if (doctor == null)
         return BadRequest();
-      }
 
-      _context.Doctors.Add(doctor);
-      await _context.SaveChangesAsync();
+    doctor.RegisteredAt = DateTime.UtcNow;
+    doctor.IsActive = true;
 
-      return Ok(new { Message = "Doctor added successfully!", Doctor = doctor });
-    }
+    _context.Doctors.Add(doctor);
+    await _context.SaveChangesAsync();
+
+    return Ok(new { Message = "Doctor registered successfully!", Doctor = doctor });
+}
+
 
     private void SeedDummyData()
     {
@@ -66,7 +68,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Harvard Medical School",
                     Experience = 12,
                     ImageUrl = "https://randomuser.me/api/portraits/men/1.jpg",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 100,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -75,7 +80,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Johns Hopkins University",
                     Experience = 15,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Michael+Brown",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 10,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -84,7 +92,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Stanford University",
                     Experience = 10,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Sarah+Wilson",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -93,7 +104,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Yale University",
                     Experience = 18,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Robert+Thompson",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 2,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -102,7 +116,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Columbia University",
                     Experience = 8,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Olivia+Davis",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 2,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -111,7 +128,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Duke University",
                     Experience = 14,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+James+Anderson",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -120,7 +140,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, University of California, San Francisco",
                     Experience = 11,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Laura+Martinez",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -129,7 +152,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Cornell University",
                     Experience = 16,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+David+Lee",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -138,7 +164,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, University of Pennsylvania",
                     Experience = 9,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Emily+Carter",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -147,7 +176,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Northwestern University",
                     Experience = 7,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Ryan+Patel",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -156,7 +188,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, University of Chicago",
                     Experience = 13,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Sophia+Kim",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -165,7 +200,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Mayo Clinic",
                     Experience = 15,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Thomas+Garcia",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -174,7 +212,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, Massachusetts Institute of Technology",
                     Experience = 10,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Anna+White",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -183,7 +224,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, University of Michigan",
                     Experience = 17,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Henry+Turner",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -192,7 +236,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, University of Washington",
                     Experience = 8,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Rachel+Adams",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
                 new Doctor
                 {
@@ -201,7 +248,10 @@ namespace AngularAuthApi.Controllers
                     Education = "MD, University of Texas",
                     Experience = 6,
                     ImageUrl = "https://via.placeholder.com/150?text=Dr.+Ethan+Moore",
-                    PhoneNumber = "+15005550006"
+                    PhoneNumber = "+15005550006",
+                    ConsultationFee = 1,
+                    IsActive = true,
+                    RegisteredAt = DateTime.UtcNow
                 },
             };
 
