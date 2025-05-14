@@ -19,7 +19,7 @@
 
             public string? Role { get; set; } = "Doctor";
 
-            [Required]
+           
             public string? Email { get; set; }
 
             [Required]
