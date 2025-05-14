@@ -18,8 +18,6 @@ namespace AngularAuthApi.Models
         public string? Token { get; set; }
 
         public string? Role { get; set; }
-
-        [Required]
         public string? Email { get; set; }
 
         [Required]

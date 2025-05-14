@@ -1001,7 +1001,6 @@
       },
       "User": {
         "required": [
-          "email",
           "password",
           "username"
         ],
@@ -1032,8 +1031,8 @@
             "nullable": true
           },
           "email": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "password": {
             "minLength": 1,
